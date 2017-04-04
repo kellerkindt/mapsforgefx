@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.itd</groupId>
+	<artifactId>mapsforgefx</artifactId>
+	<version>0.0.4-SNAPSHOT</version>
+
+	<properties>
+		<bundle.plugin.version>3.3.0</bundle.plugin.version>
+		<compiler.plugin.version>3.0</compiler.plugin.version>
+
+        <javadoc.opts>-Xdoclint:none</javadoc.opts>
+	</properties>
+
+    <profiles>
+        <profile>
+            <id>disable-java8-doclint</id>
+            <activation>
+                <jdk>[1.8,)</jdk>
+            </activation>
+            <properties>
+                <!-- prevent failing because of some missing JavaDoc -->
+                <additionalparam>-Xdoclint:none</additionalparam>
+            </properties>
+        </profile>
+    </profiles>
+	
+	<repositories>
+        <!-- Required for the MapsForge 0.3.1-MSM-0.3 dependencies -->
+        <repository>
+            <id>boundless</id>
+            <url>http://repo.boundlessgeo.com/main/</url>
+        </repository>
+	</repositories>
+
+	<build>
+		<plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+
+		</plugins>
+
+		<resources>
+			<resource>
+				<directory>resources</directory>
+				<targetPath>${project.build.outputDirectory}</targetPath>
+			</resource>
+		</resources>
+	</build>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.pax.logging</groupId>
+			<artifactId>pax-logging-service</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.pax.logging</groupId>
+			<artifactId>pax-logging-api</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+        <dependency>
+            <groupId>org.mapsforge</groupId>
+            <artifactId>mapsforge-core</artifactId>
+            <version>0.3.1-MSM-0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapsforge</groupId>
+            <artifactId>mapsforge-map</artifactId>
+            <version>0.3.1-MSM-0.3</version>
+        </dependency>
+	</dependencies>
+</project>
