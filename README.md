@@ -5,7 +5,7 @@ developed at IT-Designers GmbH in Esslingen, Germany.
 
 Some minor changes have been applied to the pom.xml and general structure for publication purpose in early 2017.
 
-See the [MapsForgeFX_demo]() for an example usage.
+See the [MapsForgeFX_demo](https://github.com/mwatzko/mapsforgefx_demo) for an example usage.
 
 # Getting started
 ```java
