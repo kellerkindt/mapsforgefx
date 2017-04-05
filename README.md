@@ -1,7 +1,6 @@
 # About
 MapsForgeFX is the Android implementation of MapsForge (https://github.com/mapsforge/mapsforge) ported to JavaFX
-in mid 2013. The port was done by Michael Watzko for the Car2X research project lead by Stefan Kaufman which was
-developed at IT-Designers GmbH in Esslingen, Germany.
+in mid 2013.
 
 Some minor changes have been applied to the pom.xml and general structure for publication purpose in early 2017.
 
@@ -73,3 +72,6 @@ available through the boundlessgeo.com maven repository,
 
 # License
 This project is licensed under the [LGPL v3](COPYING.LESSER).
+
+The port was done by me as a detached student project at IT-Designers GmbH in Esslingen, Germany.
+
