@@ -73,5 +73,5 @@ available through the boundlessgeo.com maven repository,
 # License
 This project is licensed under the [LGPL v3](COPYING.LESSER).
 
-The port was done by me as a detached student project at IT-Designers GmbH in Esslingen, Germany.
+The port was done as a detached student project at IT-Designers GmbH in Esslingen, Germany.
 
